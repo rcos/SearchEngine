@@ -1,5 +1,5 @@
 """
-Django settings for SearchEngine project.
+Django settings for Stupify project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.7/topics/settings/
@@ -48,9 +48,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'SearchEngine.urls'
+ROOT_URLCONF = 'Stupify.urls'
 
-WSGI_APPLICATION = 'SearchEngine.wsgi.application'
+WSGI_APPLICATION = 'Stupify.wsgi.application'
 
 
 # Database
