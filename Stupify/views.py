@@ -3,7 +3,7 @@ from django import forms
 
 class Form(forms.Form):
 
-    text = forms.CharField(widget=forms.Textarea)
+    text = forms.CharField(label='')
 
 def home(request):
 
