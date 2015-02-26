@@ -25,10 +25,12 @@ def stupify(sentence):
 
     return finalSentence
 
-if __name__ == '__main__':
+def load():
+    '''load words into dictionary'''
     train(words)
     train(customwords)
 
+if __name__ == '__main__':
     print stupify("I was mistaken for a hazardous evil witch. You ain't got nothing on me.")
 
     print stupify("Boyfriend")
