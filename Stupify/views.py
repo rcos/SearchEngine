@@ -25,7 +25,7 @@ def home(request):
     return render(request, 'home.html', {'form': form, 'newPhrase': newPhrase, 'phrases': phrases})
 
 def manage(request):
-    phrases = Phrase.objects.all()
+    phrases = Phrase.objects.all().order_by('votes').reverse()
     return render(request, 'manage.html', {'phrases': phrases})
 
 def vote(request, pk):

@@ -14,8 +14,10 @@
         <table class="table table-striped">
         <thead>
             <tr>
-            <th>Original</th>
-            <th>Stupified</th>
+                <th>Original</th>
+                <th>Stupified</th>
+                <th>Votes</th>
+                <th>Remove</th>
             </tr>
         </thead>
         <tbody>
@@ -26,6 +28,9 @@
                 </td>
                 <td>
                     {{ phrase.newPhrase }}
+                </td>
+                <td>
+                    {{ phrase.votes }}
                 </td>
                 <td>
                     <a href="{% url 'Stupify.views.delete' phrase.id %}" class="btn btn-danger" title="">X</a>
