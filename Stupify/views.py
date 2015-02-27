@@ -9,6 +9,8 @@ import word_replace
 
 def home(request):
     form = PhraseForm
+    newPhrase = ''
+
     if request.method == 'POST':
         form = PhraseForm(request.POST)
         if form.is_valid():
@@ -19,8 +21,8 @@ def home(request):
         form = PhraseForm()
 
     phrases = Phrase.objects.all().order_by('votes').reverse()
-
-    return render(request, 'home.html', {'form': form, 'phrases': phrases})
+    form = PhraseForm()
+    return render(request, 'home.html', {'form': form, 'newPhrase': newPhrase, 'phrases': phrases})
 
 def manage(request):
     phrases = Phrase.objects.all()
