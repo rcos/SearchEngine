@@ -34,6 +34,12 @@ def vote(request, pk):
     phrase.save()
     return HttpResponseRedirect('/')
 
+def downvote(request, pk):
+    phrase = Phrase.objects.get(pk=pk)
+    phrase.votes -= 1
+    phrase.save()
+    return HttpResponseRedirect('/')
+
 def delete(request, pk):
     Phrase.objects.get(pk=pk).delete()
     return HttpResponseRedirect('/manage/')

@@ -50,6 +50,9 @@
                     {{ phrase.votes }}
                 </td>
                 <td>
+                    <a href="{% url 'Stupify.views.downvote' phrase.id %}" class="btn btn-danger" title="">-1</a>
+                </td>
+                <td>
                     <a href="{% url 'Stupify.views.vote' phrase.id %}" class="btn btn-success" title="">+1</a>
                 </td>
             </tr>

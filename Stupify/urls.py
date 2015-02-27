@@ -10,5 +10,6 @@ urlpatterns = patterns('',
     url(r'^$', 'Stupify.views.home', name='home'),
     url(r'^manage/', 'Stupify.views.manage', name='manage'),
     url(r'^vote/(\d+)$', 'Stupify.views.vote', name='vote'),
+    url(r'^downvote/(\d+)$', 'Stupify.views.downvote', name='downvote'),
     url(r'^delete/(\d+)$', 'Stupify.views.delete', name='delete'),
 )
